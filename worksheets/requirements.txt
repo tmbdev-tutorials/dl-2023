@@ -1,0 +1,13 @@
+jupyter
+matplotlib
+imgio
+scipy
+scikit-learn
+scikit-image
+torch
+torchvision
+torchaudio
+pytorch-lightning
+seaborn
+-e git+https://github.com/tmbdev/torchmore.git#egg=torchmore
+-e git+https://github.com/webdataset/webdataset.git#egg=webdataset

@@ -1,0 +1,88 @@
+#!/bin/bash
+
+docker=docker
+image=marpteam/marp-cli
+
+die() {
+    echo "ERROR: $*"
+    exit 1
+}
+
+cmd_topdf() {
+    cp $1 /tmp/slides.md
+    rsync -a Figures/. /tmp/Figures
+    $docker run --rm --init -v /tmp:/home/marp/app/ -e LANG=$LANG $image slides.md --pdf --allow-local-files
+    cp /tmp/slides.pdf $(basename $1 .md).pdf
+}
+
+cmd_topptx() {
+    cp $1 /tmp/slides.md
+    rsync -a Figures/. /tmp/Figures
+    $docker run --rm --init -v /tmp:/home/marp/app/ -e LANG=$LANG $image slides.md --pptx --allow-local-files
+    cp /tmp/slides.pptx $(basename $1 .md).pptx
+}
+
+cmd_tohtml() {
+    cp $1 /tmp/slides.md
+    rsync -a Figures/. /tmp/Figures
+    $docker run --rm --init -v /tmp:/home/marp/app/ -e LANG=$LANG $image slides.md --allow-local-files
+    cp /tmp/slides.html $(basename $1 .md).html
+}
+
+cmd_count() {
+    for i in *.md; do echo -e $(egrep -c '# ' $i) \\t $i; done
+    cat [0-9]*.md | egrep -c '# '
+}
+
+decks="000-cover 010-ocrexample 015-statml 020-unsupml 030-sequences 032-dl-nlp-rev 035-self-supervised-rev 040-deepdistributions-rev"
+
+cmd_convert() {
+    rm -rf pdfs
+    mkdir -p pdfs
+    for f in $decks; do
+        echo === $f
+        cmd_topdf $f.md
+        mv $f.pdf pdfs/
+    done
+    wkhtmltopdf reading-list.html pdfs/reading-list.pdf
+    pdfunite pdfs/0*.pdf pdfs/reading-list.pdf breuel-slides.pdf
+}
+
+cmd_publish() {
+    touch ./pdfs/index.html
+    cp reading-list.html ./pdfs/
+    set -x
+    rclone sync pdfs dropbox:dl-2022
+    rsync -av ./pdfs/. tmbdev:tmbhome/download/.
+}
+
+cmd_help() {
+echo
+echo available commands:
+echo
+grep '^cmd_[_0-9a-z]*() {' $0 | sed 's/cmd_//;s/\(.*\)() *{* *#* */\1 -- /'
+}
+
+cmd=${1:-help}
+shift
+set -e
+case $cmd in
+help)
+    echo; echo available commands:; echo
+    grep '^cmd_[_0-9a-z]*() {' "$0" | sed 's/cmd_//;s/\(.*\)() *{* *#* */\1 -- /'
+    ;;
+*.py)
+    # cmd_versions
+    set -e
+    # hg status grep -v '^M ' > /dev/null
+    cmd_venv > venv.log
+    source venv/bin/activate
+    export OMP_NUM_THREADS=1
+    python3 "$cmd" "$@"
+    ;;
+*)
+    set -e
+    "cmd_$cmd" "$@"
+    ;;
+esac
+
