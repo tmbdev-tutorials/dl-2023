@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 headingDivider: 1
 paginate: true
 footer: 2022 Autumn Deep Learning School - Thomas Breuel - NVIDIA
@@ -140,6 +140,11 @@ For OCR, we know:
 - our transcript does not contain the character positions
 - CTC performs _alignment_ between classifier output and transcript
 - CTC estimates the most likely positions of characters given the current model
+
+# CTC Decoding
+
+![ctc decoding](https://lh3.googleusercontent.com/pw/AJFCJaWW41wXVfQwYKu1MnmhiSAfjF-B75jUKPDjzmL4pWK8eQ-XyBiXkmqx0peSBYtOQGTZlN1dbwahI64hGTEbCHWU3wunMnLj6Ig3nDCSTldPnDJU4JQoxYROInf5GoDi1bC7Ti5BEJrhFzeyH2o2wjrF-A=w1478-h921-s-no?authuser=0)
+
 # EM Training without Any Transcripts
 
 Normal EM-Training:
