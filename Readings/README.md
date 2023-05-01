@@ -1,0 +1,5 @@
+- 1706.03762.pdf - Vaswani et al.: Attention is All You Need [Transformers]
+- 1910.10683.pdf - Raffel et al.: Exploring the Limits of Transfer Learning [T5]
+- 2005.14165.pdf - Brown et al.: Language Models as Few Shot Learners [GPT-3]
+- 2103.00020.pdf - Radford et al.: Learning Transferable Vision Models [CLIP]
+- 2303.12712.pdf - Bubeck et al.: Sparks of AGI [ChatGPT]
