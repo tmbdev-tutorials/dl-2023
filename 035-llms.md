@@ -1,3 +1,9 @@
+---
+marp: true
+headingDivider: 1
+paginate: true
+footer: Lectures on Self-Supervised Learning - Thomas Breuel - NVIDIA
+---
 # UNSUPERVISED LEARNING FOR NLP
 
 <svg width="100%" height="200">

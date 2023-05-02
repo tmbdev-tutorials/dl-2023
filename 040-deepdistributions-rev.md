@@ -2,7 +2,7 @@
 marp: true
 headingDivider: 1
 paginate: true
-footer: 2022 Autumn Deep Learning School - Thomas Breuel - NVIDIA
+footer: Lectures on Unsupervised Learning - Thomas Breuel - NVIDIA
 ---
 
 # GENERATIVE AND DENSITY MODELS

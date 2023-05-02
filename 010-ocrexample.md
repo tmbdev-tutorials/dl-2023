@@ -2,7 +2,7 @@
 marp: false
 headingDivider: 1
 paginate: true
-footer: 2022 Autumn Deep Learning School - Thomas Breuel - NVIDIA
+footer: Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA
 ---
 
 # OPTICAL CHARACTER RECOGNITION
@@ -149,7 +149,7 @@ For OCR, we know:
 
 # CTC Decoding
 
-![ctc decoding](https://lh3.googleusercontent.com/pw/AJFCJaWW41wXVfQwYKu1MnmhiSAfjF-B75jUKPDjzmL4pWK8eQ-XyBiXkmqx0peSBYtOQGTZlN1dbwahI64hGTEbCHWU3wunMnLj6Ig3nDCSTldPnDJU4JQoxYROInf5GoDi1bC7Ti5BEJrhFzeyH2o2wjrF-A=w1478-h921-s-no?authuser=0)
+(diagram)
 
 # EM Training without Any Transcripts
 
