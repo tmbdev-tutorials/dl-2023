@@ -13,9 +13,15 @@ NVIDIA
 
 # INTRODUCTION
 
-# Central Question
+# Topics
 
-What can you do with large amounts of unlabeled training data?
+- using large amounts of unlabeled training data
+- self-supervised training
+- LSTM, transformers, ViT
+- large language models
+- diffusion models
+
+Application: OCR (text recognition, layout recognition, information extraction)
 
 # Different Kinds of Learning
 
