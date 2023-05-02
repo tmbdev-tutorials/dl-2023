@@ -34,7 +34,8 @@ cmd_count() {
     cat [0-9]*.md | egrep -c '# '
 }
 
-decks="000-cover 010-ocrexample 015-statml 020-unsupml 030-sequences 032-dl-nlp-rev 035-self-supervised-rev 040-deepdistributions-rev"
+# decks="000-cover 010-ocrexample 015-statml 020-unsupml 030-sequences 032-dl-nlp-rev 035-self-supervised-rev 040-deepdistributions-rev"
+decks="000-cover 010-ocrexample 035-llms 037-vision-selfsupervised 040-deepdistributions-rev"
 
 cmd_convert() {
     rm -rf pdfs
@@ -46,6 +47,13 @@ cmd_convert() {
     done
     wkhtmltopdf reading-list.html pdfs/reading-list.pdf
     pdfunite pdfs/0*.pdf pdfs/reading-list.pdf breuel-slides.pdf
+}
+
+cmd_allhtml() {
+    for f in $decks; do
+        echo === $f
+        cmd_tohtml $f.md
+    done
 }
 
 cmd_publish() {
