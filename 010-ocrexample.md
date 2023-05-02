@@ -19,6 +19,12 @@ Optical Character Recognition:
     - ground truth
     - syntactic structure / language modeling
 
+# Applications
+
+- surprisingly, a hot topic!
+- wanted: information extraction from unstructed documents
+- NLP technology didn't use to be up to it
+- with new LLMs, that has changed dramatically
 # Motivating Example: OCR
 
 ![](Figures/ocr-simple.png)
@@ -384,7 +390,19 @@ Recent Developments
 - transformer models permit full end-to-end training for image-to-text transcriptions
 - do not need intermediate segmentation, text-line recognition
 
-Self-Supervised Training
+# LayTR Multicolun Recognition
+
+![](Figures/laytr1.jpeg)
+
+Image-to-HTML tags.
+
+# LayTR Table Recognition
+
+![](Figures/laytr2.png)
+
+Image-to-HTML tags.
+
+# Self-Supervised Training
 
 - apply the same principles
 - train an initial model using supervised data
@@ -392,6 +410,10 @@ Self-Supervised Training
 - correct the output using language models
 - retrain
 - possibly use auxiliary tasks for pretraining (later)
+
+# Or has it been solved already...
+
+<img src="Figures/gpt4-ocr.png" height=400px />
 
 # Summary
 
@@ -401,10 +423,3 @@ In the OCR example, we have seen most of the major concepts of unsupervised and 
 - use of language modeling as data source
 - clustering
 - unsupervised preprocessing / image enhancement
-
-# Coming Next
-
-- review some classical statistics and machine learning
-- look at "bag of tricks" for language models
-- look at "bag of tricks" for object recognition
-- look at modeling densities and GANs
