@@ -4,11 +4,9 @@ headingDivider: 1
 paginate: true
 footer: Lectures on Self-Supervised Learning - Thomas Breuel - NVIDIA
 ---
-# UNSUPERVISED LEARNING FOR NLP
+# UN/SELF-SUPERVISED LEARNING FOR NLP
 
-<svg width="100%" height="200">
-  <rect x="0" y="0" width="100%" height="200" fill="#cccccc" />
-</svg>
+![w:800px h:200px](Figures/gray.png)
 
 # History
 
@@ -18,23 +16,20 @@ footer: Lectures on Self-Supervised Learning - Thomas Breuel - NVIDIA
     - simple statistical models are themselves useful for speech recognition and other applications
 - surprisingly (?) when language models became large enough, intelligent behavior emerged
 
-# Traditional Language Modeling task
+# Traditional Language Modeling Task
 
-Predict the next word in a sequence:
+- Predict the next word in a sequence: 
 
-- generate new text (sampling)
-- assign probabilities to strings (language modeling)
+$$P(w_t | w_1, \dots, w_{t-1})$$
 
-Examples:
+- Generate new text (sampling): 
 
-- n-gram models, finite state transducers
-- TDNN, LSTM models (e.g. Graves 2013, Arxiv 1308.0850)
+$$\text{Sample}(w_t) \sim P(w_t | w_1, \dots, w_{t-1})$$
 
-# Statistical Language Modeling
+- Assign probabilities to strings (language modeling): 
 
-- Aims to model generative likelihood of word sequences
-- Predicts probabilities of future or missing tokens
-- Developed based on statistical learning methods that rose in the 1990s
+$$P(w_1, \dots, w_T) = \prod_{t=1}^{T} P(w_t | w_1, \dots, w_{t-1})$$
+
 
 # Pre-Transformer History
 
@@ -45,8 +40,6 @@ Examples:
 4. Conditional random fields (Lafferty et al.) - 2001
 5. Neural network language models (Bengio et al.) - 2003
 8. Transformer-based language models (Vaswani et al.) - 2017
-
-(NB: many of these actually have prior work, but these are the papers commonly referenced these days.)
 
 # Embeddings: word2vec and ELMO
 
@@ -59,9 +52,7 @@ Examples:
 
 # TRANSFORMERS (QUICK REVIEW)
 
-<svg width="100%" height="200">
-  <rect x="0" y="0" width="100%" height="200" fill="#cccccc" />
-</svg>
+![w:800px h:200px](Figures/gray.png)
 
 # Transformer Architecture
 
@@ -73,7 +64,7 @@ Examples:
     - added attention mechanisms to LSTM to improve performance
     - later, eliminated the LSTM altogether and retained just attention
 
-Vaswani, Ashish, et al. "Attention is all you need." Advances in neural information processing systems, vol. 30, 2017, pp. 5998-6008.
+_Vaswani, Ashish, et al. "Attention is all you need." Advances in neural information processing systems, vol. 30, 2017, pp. 5998-6008._
 
 # Transformers are Trained in Parallel
 
@@ -102,13 +93,9 @@ The order of inputs do a transformer doesn't matter as far as the model is conce
 
 # HISTORY OF TRANSFORMER-BASED MODELS
 
-<svg width="100%" height="200">
-  <rect x="0" y="0" width="100%" height="200" fill="#cccccc" />
-</svg>
+![w:800px h:200px](Figures/gray.png)
 
-# Survey Paper
-
-Liu, X., Li, M., Gao, J., Wu, S., & Chen, D. (2021). A Survey of Pre-trained Language Models. In Proceedings of the Association for Computational Linguistics (pp. 1-88).
+Useful reading: _Liu, X., Li, M., Gao, J., Wu, S., & Chen, D. (2021). A Survey of Pre-trained Language Models. In Proceedings of the Association for Computational Linguistics (pp. 1-88)._
 
 # Attention is All You Need
 
@@ -128,6 +115,10 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 6. Unified text-to-text framework (T5), Raffel et al.
 7. Parallelism across multiple devices (GShard), Kitaev et al.
 8. Dynamic computation graphs for variable-length inputs (Switch Transformers), Fedus et al.
+
+# Evolution of Large Language Models
+
+![h:600](Figures/llm-evolution.png)
 
 # GPT-1
 
@@ -162,28 +153,6 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 - Strongest at: Text generation tasks such as story writing and poetry composition
 - Weakest or unsuitable for: Tasks requiring external knowledge or reasoning beyond the given text
 
-# XLNet
-
-- eXtreme Language understanding NETwork
-- Language model by CMU and Google (2019)
-- Pre-trained on large corpus of text data using permutation-based training
-- Captures context from both left and right of a token
-- Uses unsupervised learning to predict next word in a sequence
-- Fine-tuned on downstream tasks such as question answering and natural language inference
-- Strongest at: Question answering tasks such as SQuAD 2.0 dataset
-- Weakest or unsuitable for: Tasks requiring external knowledge or reasoning beyond the given text
-
-# XLNet-Style Permutation Training Example
-
-- Task: Language Modeling
-- Input sequence: "The quick brown fox jumps over the lazy dog."
-- Randomly permute input sequence to create new sequence: "The dog over quick brown jumps the lazy fox."
-- Train model to predict original sequence given permuted sequence
-- Repeat permutation process for each training example
-- Model captures context from both left and right of each token during training and inference
-- Permutation-based training allows model to learn bidirectional dependencies without using a specific order or directionality
-- Resulting model can perform well on tasks requiring understanding of long-range dependencies
-
 # T5
 
 - Text-to-Text Transfer Transformer
@@ -197,27 +166,6 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 # ExT5
 
 ![](Figures/ext5.png)
-
-# ELECTRA
-
-- Efficiently Learning an Encoder that Classifies Token Replacements Accurately
-- Language model by Google (2020)
-- Pre-trained on large corpus of text data using a generator-discriminator framework
-- Discriminator predicts whether each token in a sequence is real or generated by the generator
-- Uses unsupervised learning to predict next word in a sequence
-- Fine-tuned on downstream tasks such as sentiment analysis and named entity recognition
-- Strongest at: Adversarial training for better generalization and sample efficiency compared to GPT-series models
-
-# ELECTRA-Style Adversarial Training Example
-
-- Task: Sentiment Analysis
-- Generator: Masked Language Model (MLM)
-- Discriminator: Binary Classifier
-- MLM replaces 15% of input tokens with random tokens and trains to predict original tokens
-- Discriminator takes input sequence and predicts whether each token is real or generated by MLM
-- Discriminator trained to maximize binary cross-entropy loss on real/generated labels
-- MLM trained to minimize binary cross-entropy loss on discriminator's generated labels
-- Adversarial objective: Maximize discriminator's loss while minimizing MLM's loss
 
 # ChatGPT
 
@@ -253,11 +201,28 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 - Overview of language modeling and its evolution
 - Introduction to pre-trained language models (PLMs)
 
+# RETRO
+
+- Retro combines a frozen Bert retriever, a differentiable encoder, and a chunked cross-attention mechanism
+- Fine-tuning Retro quickly recovers and surpasses non-retrieval performance
+- Retro can be applied to other natural language processing tasks
+- Trained on 2 trillion tokens, using 25% fewer parameters than GPT-3
+- Retro opens up new avenues for improving language models through explicit memory at largelllm scale
+
+
+# Further Important Developments
+
+- better kernel implementations
+- new attention mechanisms, sub-quadratic scaling
+- better initialization
+- model, data, pipeline parallelism
+- mixture of experts models
+- pathways (PALM) model
+
+
 # BENCHMARKS
 
-<svg width="100%" height="200">
-  <rect x="0" y="0" width="100%" height="200" fill="#cccccc" />
-</svg>
+![w:800px h:200px](Figures/gray.png)
 
 # Benchmarks
 
@@ -281,44 +246,101 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 11. Natural Language Inference
 12. Commonsense Reasoning
 
+# RLHF
+
+![w:800px h:200px](Figures/gray.png)
+
+# "Reinforcement Learning" from Human Feedback
+
+![h:400](Figures/rlhf.png)
+
+# "Reinforcement Learning" from Human Feedback
+
+- problem: direct training of summarization/answering might be difficult
+  - there is no single "correct" answer, only lots of equivalent ones
+- solution:
+  - train a model that rates the quality of summarizations like humans
+  - fine-tune a language model based on the rating model
+  - also impose some constraint to prevent it from giving unrelated answers
+- results in much improved summarization
+- technique can be generalized to instruction following, assistants
+
+# Open Assistant RLHF
+
+![h:600](Figures/openassistant-training.png)
+
+# RLHF Considerations
+
+- it's unclear we need the rating model at all
+  - there is no "single correct answer" for other types of language modeling either
+- it's not "reinforcement learning" in any meaningful sense
+  - RL is about sequences of interactions with an environment and rewards
+  - RL is hard because rewards are based on the entire history (credit assignment)
+- requires lots of manual tuning for good outputs
+
+Nevertheless:
+- right now, it seems to result in better quality outputs
+- the "rating model" may be more reusable than specific human responses
+
 # PRETRAINED OPEN SOURCE
 
-<svg width="100%" height="200">
-  <rect x="0" y="0" width="100%" height="200" fill="#cccccc" />
-</svg>
-
-# Available Language Models
-
-- Developing or reproducing LLMs is challenging due to technical issues and computation demands.
-- Training from scratch can cost millions.
-- Taking an existing model and fine-tuning it is an option.
-- This section summarizes publicly available resources for developing LLMs, including model checkpoints (or APIs), corpora, and libraries.
-
-# Model Checkpoints
-- Pre-trained models that can be fine-tuned for specific tasks.
-- Publicly available for many popular LLM architectures such as GPT, T5, and BERT.
-- Can be used as starting points for training new models or as feature extractors for downstream tasks.
+![w:800px h:200px](Figures/gray.png)
 
 # Hugging Face Transformers
 - Popular library that provides access to many pre-trained LLM models.
 - Includes a wide range of architectures such as GPT, T5, BERT, and more.
 - Provides tools for fine-tuning models on custom datasets.
 
-# OpenAI GPT Models
-- Several versions of their GPT model with varying sizes (e.g., GPT-2, GPT-3).
-- Pre-trained on large amounts of text data and can be fine-tuned for various NLP tasks.
-- Available through OpenAI's API or can be downloaded from their website.
-
 # Google T5 Models
 - Several versions of their T5 model with varying sizes (e.g., T5-small, T5-base).
 - Pre-trained on large amounts of text data and can be fine-tuned for various NLP tasks.
 - Available through Google's Cloud AI Platform or can be downloaded from their website.
 
+# ChatGPT Alternatives
+
+- many people believe that LLMs need to become widely available
+- prevent manipulation of LLMs by corporations/governments
+- many new implementations
+- many new datasets
+# Risks
+
+- copyright and government regulations may end up monopolizing training data
+- problem for both LLMs and generative image models
+
+Consider:
+
+- backup training data and models before they disappear
+- actively work with the technology
+
+# AutoGPT
+
+- open-source AI tool using GPT-4 models to perform tasks
+- "AI agent"
+  - input: goal in natural language
+  - breaks down into sub-tasks
+  - uses the Internet and other tools to obtain more information and perform actions
+
+# ChaosGPT
+
+
+- ChaosGPT is an open-source AI agent that was created in April 2023
+- programmed to destroy humanity and establish global dominance
+- ChaosGPT's creator stopped posting updates after its second YouTube video
+- It is unclear whether ChaosGPT is still active.
+
+# Open Assistant
+
+- created by LAION and Yannic Kilcher https://open-assistant.io/team
+- open-source AI assistant project, an alternative to OpenAI's ChatGPT.
+- collected a large corpus of conversation data in multiple languages.
+- based on Meta's LLaMA (30b params), EleutherAI's Pythia
+- said to approach ChatGPT's gpt-3.5-turbo model in terms of results.
+- released the code and data, and all models can be tried out via a web interface
+
+
 # TRAINING FROM SCRATCH
 
-<svg width="100%" height="200">
-  <rect x="0" y="0" width="100%" height="200" fill="#cccccc" />
-</svg>
+![w:800px h:200px](Figures/gray.png)
 
 # Commonly Used Corpora for Training LLMs
 
@@ -358,9 +380,7 @@ The experiments were conducted using the following hardware configurations:
 
 # REUSING PRETRAINED MODELS
 
-<svg width="100%" height="200">
-  <rect x="0" y="0" width="100%" height="200" fill="#cccccc" />
-</svg>
+![w:800px h:200px](Figures/gray.png)
 
 # Fine-Tuning and Adaptation
 
@@ -433,9 +453,7 @@ The experiments were conducted using the following hardware configurations:
 
 # APPLICATION CONSIDERATIONS
 
-<svg width="100%" height="200">
-  <rect x="0" y="0" width="100%" height="200" fill="#cccccc" />
-</svg>
+![w:800px h:200px](Figures/gray.png)
 
 # Applications
 

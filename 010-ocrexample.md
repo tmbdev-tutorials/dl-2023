@@ -392,7 +392,7 @@ Recent Developments
 
 # LayTR Multicolun Recognition
 
-![](Figures/laytr1.jpeg)
+![](Figures/laytr1.png)
 
 Image-to-HTML tags.
 
@@ -413,7 +413,21 @@ Image-to-HTML tags.
 
 # Or has it been solved already...
 
-<img src="Figures/gpt4-ocr.png" height=400px />
+![h:400](Figures/gpt4-ocr.png)
+
+# Exploiting Foundation Models
+
+- CLIP
+    - image features
+    - image quality
+    - image type
+    - script
+- LLMs
+    - language modeling during recognition
+    - OCR correction
+- uses
+    - full recognition pipeline (slow!)
+    - training data generation followed by "distillation"
 
 # Summary
 

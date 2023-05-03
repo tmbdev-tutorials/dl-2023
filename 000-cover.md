@@ -82,6 +82,25 @@ I'm assuming you have
 
 We will focus on the unsupervised / self-supervised aspects of methods and papers we will be discussing, discussing other aspects of papers only as needed.
 
+# Rapid Radical Change
+
+- transformers, LLMs, and language supervision have radically changed the field over the last couple of years
+- much of it is heuristic, but works better
+
+# Other Issues
+
+- governance
+- alignment
+- ...
+
+Discuss?
+
+# Exercises
+
+- planning on exercises in coLab
+- small-ish project that can be done in 1-2h
+
+
 <!--
 # More Topics
 
