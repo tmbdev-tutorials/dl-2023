@@ -95,7 +95,11 @@ The order of inputs do a transformer doesn't matter as far as the model is conce
 
 ![w:800px h:200px](Figures/gray.png)
 
-Useful reading: _Liu, X., Li, M., Gao, J., Wu, S., & Chen, D. (2021). A Survey of Pre-trained Language Models. In Proceedings of the Association for Computational Linguistics (pp. 1-88)._
+# Recent Surveys
+
+_Liu, X., Li, M., Gao, J., Wu, S., & Chen, D. (2021). A Survey of Pre-trained Language Models. In Proceedings of the Association for Computational Linguistics (pp. 1-88)._
+
+_Yang, J. et al. Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond. Preprint at https://doi.org/10.48550/arXiv.2304.13712 (2023)_
 
 # Attention is All You Need
 
@@ -130,28 +134,30 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 - Fine-tuned on downstream tasks such as language modeling and text classification
 - Strongest at: Language modeling tasks such as Penn Treebank dataset
 
+_Improving language understanding by generative pre-training.  Alec Radford, Karthik Narasimhan, Tim Salimans, Ilya Sutskever (2018)_
 
-# BERT
+
+# BERT (Google, 2019)
 
 - Bidirectional Encoder Representations from Transformers
-- Language model by Google (2019)
-- Pre-trained on large corpus of text data using bidirectional transformers
 - Captures context from both left and right of a token
 - Uses masked language modeling and next sentence prediction tasks during pre-training
-- Fine-tuned on downstream tasks such as question answering, sentiment analysis, and named entity recognition
+- Fine-tuned on downstream tasks: question answering, sentiment analysis, NER
 - Strongest at: Question answering tasks such as SQuAD and GLUE benchmark datasets
 - Important systems based on BERT: RoBERTa, ALBERT, DistilBERT
 
-# GPT-2
+_BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. Devlin et al. 2019_
+
+# GPT-2 (OpenAI 2019)
 
 - Generative Pre-trained Transformer 2
-- Language model by OpenAI (2019)
 - Pre-trained on large corpus of text data using unidirectional transformer
 - Increased parameter scale to 1.5B compared to GPT-1
 - Uses unsupervised learning to predict next word in a sequence
 - Fine-tuned on downstream tasks such as language modeling and text generation
 - Strongest at: Text generation tasks such as story writing and poetry composition
-- Weakest or unsuitable for: Tasks requiring external knowledge or reasoning beyond the given text
+
+_Language Models are Unsupervised Multitask Learners. Radford et al. (2019)_
 
 # T5
 
@@ -163,9 +169,13 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 - Fine-tuned on downstream tasks such as question answering and summarization
 - Strongest at: Multi-task learning across various NLP tasks such as translation, summarization, and classification
 
+_Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer. Raffel et al. 2020_
+
 # ExT5
 
 ![](Figures/ext5.png)
+
+_ExT5: Towards Extreme Multi-Task Scaling for Transfer Learning. Aribandi et al. (2022)_
 
 # ChatGPT
 
@@ -177,6 +187,8 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 - Supports plugin mechanism to extend capacities with existing tools or apps
 - Strongest at: Multi-turn dialogues and aligning with human values for safe use
 
+_Ouyang, L. et al. Training language models to follow instructions with human feedback. (2022)_
+
 # GPT-3
 
 - Generative Pre-trained Transformer 3
@@ -187,6 +199,8 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 - Fine-tuned on downstream tasks such as language translation and question answering
 - Strongest at: Few-shot learning across various NLP tasks such as translation, summarization, and classification
 
+_Language Models are Few-Shot Learners. Brown et al. (2020)_
+
 # Flan-T5
 
 - "Few-shot Language Adaptation with Transformers"
@@ -195,11 +209,7 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 - strong zero-shot, few-shot, and CoT abilities, outperforming prior public checkpoints such as T5. 
 - Flan-T5 11B outperformed T5 11B by double-digit improvements and even outperformed PaLM 62B on some challenging BIG-Bench tasks
 
-
-
-# GPT-4
-- Overview of language modeling and its evolution
-- Introduction to pre-trained language models (PLMs)
+_Scaling Instruction-Finetuned Language Models. Chung et al. (2022)_
 
 # RETRO
 
@@ -209,6 +219,17 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 - Trained on 2 trillion tokens, using 25% fewer parameters than GPT-3
 - Retro opens up new avenues for improving language models through explicit memory at largelllm scale
 
+_Borgeaud, S. et al. Improving language models by retrieving from trillions of tokens. (2022)_
+
+# Switch Transformers
+
+- Introduce sparsity to deep learning models, simplified routing algorithm
+- Select experts based on input features
+- Group experts into clusters to reduce communication costs
+- Outperform dense models and MoE Transformers on a speed-quality basis
+- Smaller expert capacities perform better at lower capacity factors (1.0, 1.25)
+- Can be applied to various tasks such as language modeling, image classification, and speech recognition 
+- Open source
 
 # Further Important Developments
 
@@ -230,7 +251,6 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 - BIG-bench: A benchmark that contains a large number of diverse tasks to evaluate LLMs' generalization ability.
 - HELM: A benchmark that focuses on evaluating LLMs' ability to perform complex reasoning tasks.
 
-
 # BIG-Bench
 
 1. Extractive Question Answering
@@ -243,8 +263,9 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
 8. Coreference Resolution
 9. Word Sense Disambiguation
 10. Paraphrase Detection
-11. Natural Language Inference
-12. Commonsense Reasoning
+...
+
+_Beyond the Imitation Game. Srivastava et al. (2022)_
 
 # RLHF
 
@@ -264,6 +285,9 @@ Vaswani, Ashish, et al. "Attention is all you need." Advances in neural informat
   - also impose some constraint to prevent it from giving unrelated answers
 - results in much improved summarization
 - technique can be generalized to instruction following, assistants
+
+_Stiennon et al. Learning to summarize with human feedback. (2020)_
+_Ouyang et al. Training language models to follow instructions with human feedback. (2022)_
 
 # Open Assistant RLHF
 
@@ -320,6 +344,8 @@ Consider:
   - breaks down into sub-tasks
   - uses the Internet and other tools to obtain more information and perform actions
 
+  https://github.com/Significant-Gravitas/Auto-GPT
+
 # ChaosGPT
 
 
@@ -337,6 +363,7 @@ Consider:
 - said to approach ChatGPT's gpt-3.5-turbo model in terms of results.
 - released the code and data, and all models can be tried out via a web interface
 
+https://open-assistant.io/
 
 # TRAINING FROM SCRATCH
 
@@ -490,3 +517,50 @@ The experiments were conducted using the following hardware configurations:
 
 (Question: _whose_ values?)
 
+# Key features of the EU AI Act
+
+- three tiered system for AI systems (high/medium/low criticality)
+- requirements
+  - ethical and transparency requirements
+  - ensuring that AI systems are not biased or discriminatory
+  - objective and neutral
+  - designed in a way that allows users to understand how they work.
+- European Artificial Intelligence Board
+- auditors and harsh penalties (percentage of worldwide revenue, etc.)
+
+# SUMMARY
+
+![w:800px h:200px](Figures/gray.png)
+
+# Summary
+
+- explosion of language models: easy to train, easy to scale, lots of data
+- lots of techniques / heuristics to elicit desired behavior
+  - instruction fine-tuning
+  - "reinforcement learning"
+
+# Issues
+
+- language models are just statistical summaries of training text
+- training text contains universal truths, beliefs, fiction, lies
+- training text also contains correct logical inferences, fallacies, common mistakes
+- there is no single "correct" answer to many complex questions
+- there is no single best "alignment", since different users have different preferences
+
+# Promising Directions
+
+- retrieval-based language modeling
+  - much better control over sources, also: smaller models, more efficient
+- training tasks related to context, evidence, language, and justification
+  - "According to ..., what is the answer?", "What sources support this assertion?"
+- much better integration of agents and other models
+  - cf AutoGPT, ChatGPT, etc.
+- new tech...
+
+# Specific Projects
+
+- Single GPU Switch Transformer training -- how far can we take it?
+- Federated Learning of LLMs
+- A usable, open source, retrieval based LLM.
+- Using retrieval-based LLMs to handle context and explainabilitiy better.
+- Retrieval based LLMs for interacting with document collecionts.
