@@ -18,8 +18,8 @@
 <p>Optical Character Recognition:</p>
 <ul>
 <li>image → text</li>
-<li>closely related to object recognition, autonomous driving, speech recognition, ...</li>
-<li>much better statistical understanding of...
+<li>closely related to object recognition, autonomous driving, speech recognition, …</li>
+<li>much better statistical understanding of…
 <ul>
 <li>class structure</li>
 <li>noise</li>
@@ -35,7 +35,7 @@
 <ul>
 <li>surprisingly, a hot topic!</li>
 <li>wanted: information extraction from unstructed documents</li>
-<li>NLP technology didn't use to be up to it</li>
+<li>NLP technology didn’t use to be up to it</li>
 <li>with new LLMs, that has changed dramatically</li>
 </ul>
 <footer>Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA</footer>
@@ -97,7 +97,7 @@
 <h1 id="using-millions-of-untranscribed-pages">Using Millions of Untranscribed Pages</h1>
 <p>Idea:</p>
 <ul>
-<li>Use our or other OCR systems to transcribe those pages and use the output as training data (&quot;pseudolabel&quot;)</li>
+<li>Use our or other OCR systems to transcribe those pages and use the output as training data (“pseudolabel”)</li>
 </ul>
 <p>Questions:</p>
 <ul>
@@ -112,7 +112,7 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-footer="Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA" data-heading-divider="1" data-marpit-pagination="12" data-marpit-pagination-total="60" style="--paginate:true;--footer:Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA;--heading-divider:1;">
 <h1 id="example-word-recognition-problem">Example: Word Recognition Problem</h1>
-<p>Let's focus just on recognizing words for the following examples (forget about the rest of the OCR system):</p>
+<p>Let’s focus just on recognizing words for the following examples (forget about the rest of the OCR system):</p>
 <p><img src="Figures/ocr-words2.png" alt="" /></p>
 <footer>Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA</footer>
 </section>
@@ -121,13 +121,13 @@
 <p>Idea:</p>
 <ul>
 <li>run the existing OCR system, giving word images and corresponding text</li>
-<li>construct a new training set by...
+<li>construct a new training set by…
 <ul>
 <li>rejecting any word that the OCR system has a low confidence in</li>
 <li>rejecting any word that is not found in the dictionary</li>
 </ul>
 </li>
-<li>this way, we obtain a new training set that contains &quot;mostly good&quot; training samples</li>
+<li>this way, we obtain a new training set that contains “mostly good” training samples</li>
 <li>iterate this multiple times</li>
 </ul>
 <footer>Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA</footer>
@@ -154,9 +154,9 @@
 <li>outlier status for unlabeled portion of training set</li>
 </ul>
 </li>
-<li>EM algorithms recover latent variables by...
+<li>EM algorithms recover latent variables by…
 <ul>
-<li>&quot;making a best guess&quot; given the current model</li>
+<li>“making a best guess” given the current model</li>
 <li>retraining the model as if that guess is correct</li>
 </ul>
 </li>
@@ -256,7 +256,7 @@
 <p>Approach:</p>
 <ul>
 <li>validate each returned word using OCR (no OCR = not a word)</li>
-<li>mark everything that is not identified as a word as &quot;don't know&quot; and exclude from training</li>
+<li>mark everything that is not identified as a word as “don’t know” and exclude from training</li>
 </ul>
 <footer>Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA</footer>
 </section>
@@ -266,14 +266,14 @@
 <ul>
 <li>text recognizer
 <ul>
-<li>reject non-words from &quot;soft labels&quot;</li>
+<li>reject non-words from “soft labels”</li>
 <li>use language models as part of EM training</li>
 </ul>
 </li>
 <li>page segmentation
 <ul>
 <li>validate segmentation via OCR</li>
-<li>introduce &quot;don't know&quot; mask during training</li>
+<li>introduce “don’t know” mask during training</li>
 </ul>
 </li>
 </ul>
@@ -284,7 +284,7 @@
 <p>Prior knowledge about the task is required to choose meaningful self-supervision tasks.</p>
 <ul>
 <li>word recognition: pseudolabels, language-model based rejection</li>
-<li>segmentation: verification via OCR, introduction of &quot;don't care&quot; regions</li>
+<li>segmentation: verification via OCR, introduction of “don’t care” regions</li>
 <li>object reconition, natural image segmentation: <em>later</em></li>
 </ul>
 <footer>Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA</footer>
@@ -323,13 +323,13 @@
 <li>cluster characters by shape</li>
 <li>use frequency and patterns to infer character identity
 <ul>
-<li>e.g.: first word is likely &quot;THE&quot;
+<li>e.g.: first word is likely “THE”
 <ul>
 <li>letter frequencies</li>
 <li>word frequencies</li>
 </ul>
 </li>
-<li>single letter word is likely &quot;A&quot;</li>
+<li>single letter word is likely “A”</li>
 </ul>
 </li>
 <li>explicit form of many EM-based recognition algorithms</li>
@@ -372,9 +372,9 @@
 <h1 id="manifolds-learning">Manifolds Learning</h1>
 <p><img src="Figures/vision-manifolds.png" alt="" /></p>
 <ul>
-<li>think of real data as clouds surrounding...</li>
+<li>think of real data as clouds surrounding…</li>
 <li>union of manifolds with boundary (only shown for blue class)</li>
-<li>&quot;manifold learning&quot; = union-of-manifold-s-with-boundary learning</li>
+<li>“manifold learning” = union-of-manifold-s-with-boundary learning</li>
 </ul>
 <footer>Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA</footer>
 </section>
@@ -404,13 +404,13 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-paginate="true" data-footer="Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA" data-heading-divider="1" data-marpit-pagination="43" data-marpit-pagination-total="60" style="--paginate:true;--footer:Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA;--heading-divider:1;">
 <h1 id="artificial-data-generation">Artificial Data Generation</h1>
-<p>This is the &quot;forward path&quot; in the channel view of recognition:</p>
+<p>This is the “forward path” in the channel view of recognition:</p>
 <ul>
-<li>digital typesetting = perfect &quot;artificial&quot; document generation</li>
+<li>digital typesetting = perfect “artificial” document generation</li>
 <li>take any text, generate pages of perfect text</li>
-<li>for OCR, we need &quot;degraded images&quot;
+<li>for OCR, we need “degraded images”
 <ul>
-<li>printing, scanning, photographing, photocopying, ...</li>
+<li>printing, scanning, photographing, photocopying, …</li>
 </ul>
 </li>
 <li>physical processes for document image degradataion are well known</li>
@@ -426,7 +426,7 @@
 <h1 id="document-image-restoration">Document Image Restoration</h1>
 <ul>
 <li>recognition is easier if documents are not degraded</li>
-<li>can we restore the &quot;clean&quot; image via unsupervised learning?</li>
+<li>can we restore the “clean” image via unsupervised learning?</li>
 </ul>
 <p>AV/object recognition: image translation prior to recognition</p>
 <footer>Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA</footer>
@@ -452,9 +452,9 @@
 <footer>Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-paginate="true" data-footer="Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA" data-heading-divider="1" data-marpit-pagination="47" data-marpit-pagination-total="60" style="--paginate:true;--footer:Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA;--heading-divider:1;">
-<h1 id="otsus-method-optimal-thresholding">Otsu's Method: &quot;Optimal&quot; Thresholding</h1>
+<h1 id="otsus-method-optimal-thresholding">Otsu’s Method: “Optimal” Thresholding</h1>
 <p><img src="Figures/ocr-otsu.png" alt="" /></p>
-<p>Otsu's method:</p>
+<p>Otsu’s method:</p>
 <ul>
 <li>manually constructed inverse degradation model based on prior knowledge/assumptions</li>
 <li>assume some kind of mixture model of image pixel generation</li>
@@ -481,7 +481,7 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-paginate="true" data-footer="Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA" data-heading-divider="1" data-marpit-pagination="49" data-marpit-pagination-total="60" style="--paginate:true;--footer:Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA;--heading-divider:1;">
 <h1 id="binarization-by-supervised-deep-learning">Binarization by Supervised Deep Learning</h1>
 <p><img src="Figures/ocr-deepthresh.png" alt="" /></p>
-<p>(a) original, (b) Sauvola, (c) LSTM-based binarization</p>
+<p>(a) original, (b) Sauvola, © LSTM-based binarization</p>
 <footer>Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-paginate="true" data-footer="Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA" data-heading-divider="1" data-marpit-pagination="50" data-marpit-pagination-total="60" style="--paginate:true;--footer:Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA;--heading-divider:1;">
@@ -549,7 +549,7 @@
 <ul>
 <li>apply the same principles</li>
 <li>train an initial model using supervised data</li>
-<li>compute output on unlabeled data (&quot;soft labels&quot;)</li>
+<li>compute output on unlabeled data (“soft labels”)</li>
 <li>correct the output using language models</li>
 <li>retrain</li>
 <li>possibly use auxiliary tasks for pretraining (later)</li>
@@ -557,7 +557,7 @@
 <footer>Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58" data-paginate="true" data-footer="Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA" data-heading-divider="1" data-marpit-pagination="58" data-marpit-pagination-total="60" style="--paginate:true;--footer:Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA;--heading-divider:1;">
-<h1 id="or-has-it-been-solved-already">Or has it been solved already...</h1>
+<h1 id="or-has-it-been-solved-already">Or has it been solved already…</h1>
 <p><img src="Figures/gpt4-ocr.png" alt="" style="height:400px;" /></p>
 <footer>Lectures on Self Supervised Learning - Thomas Breuel - NVIDIA</footer>
 </section>
@@ -581,7 +581,7 @@
 <li>uses
 <ul>
 <li>full recognition pipeline (slow!)</li>
-<li>training data generation followed by &quot;distillation&quot;</li>
+<li>training data generation followed by “distillation”</li>
 </ul>
 </li>
 </ul>
