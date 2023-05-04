@@ -563,4 +563,4 @@ The experiments were conducted using the following hardware configurations:
 - Federated Learning of LLMs
 - A usable, open source, retrieval based LLM.
 - Using retrieval-based LLMs to handle context and explainabilitiy better.
-- Retrieval based LLMs for interacting with document collecionts.
+- Retrieval based LLMs for interacting with document collections

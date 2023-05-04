@@ -170,7 +170,7 @@ Conclusions:
 
 # Combining Image and Text Models
 
-- GPT-3, ExT5, etc. show how natural language models can be used for zero short learning
+- GPT-3, ExT5, etc. show how natural language models can be used for zero shot learning
 - CLIP
     - use natural language supervision for image recognition (weak supervision)
     - vision: transformer or ResNet, language: transformer
@@ -235,7 +235,11 @@ Current and future directions:
 
 # Segment Anything
 
-![](Figures/sam-1.png)
+- Model initialized with MAE weights
+- CLIP-derived text encoding
+- Promptable segmentation for weak labels using automatic prompt generation
+- Self-training for pseudolabels
+- Fine-tuning on labeled and pseudolabeled data
 
 # Segment Anything
 
