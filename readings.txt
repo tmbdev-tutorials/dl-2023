@@ -1,0 +1,40 @@
+[1] N. Shazeer et al., “Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer.” arXiv, Jan. 23, 2017. doi: 10.48550/arXiv.1701.06538.
+[2] A. Vaswani et al., “Attention Is All You Need.” arXiv, Dec. 05, 2017. doi: 10.48550/arXiv.1706.03762.
+[3] Z. Dai, Z. Yang, Y. Yang, J. Carbonell, Q. V. Le, and R. Salakhutdinov, “Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context.” arXiv, Jun. 02, 2019. doi: 10.48550/arXiv.1901.02860.
+[4] Y.-C. Chen et al., “UNITER: UNiversal Image-TExt Representation Learning.” arXiv, Jul. 17, 2020. doi: 10.48550/arXiv.1909.11740.
+[5] A. Gulati et al., “Conformer: Convolution-augmented Transformer for Speech Recognition.” arXiv, May 16, 2020. doi: 10.48550/arXiv.2005.08100.
+[6] N. Kitaev, Ł. Kaiser, and A. Levskaya, “Reformer: The Efficient Transformer.” arXiv, Feb. 18, 2020. Accessed: Mar. 17, 2023. [Online]. Available: http://arxiv.org/abs/2001.04451
+[7] N. Stiennon et al., “Learning to summarize from human feedback,” arXiv.org, Sep. 02, 2020. https://arxiv.org/abs/2009.01325v3 (accessed May 03, 2023).
+[8] H. Bao, L. Dong, S. Piao, and F. Wei, “BEiT: BERT Pre-Training of Image Transformers,” arXiv.org, Jun. 15, 2021. https://arxiv.org/abs/2106.08254v2 (accessed May 03, 2023).
+[9] K. He, X. Chen, S. Xie, Y. Li, P. Dollár, and R. Girshick, “Masked Autoencoders Are Scalable Vision Learners,” arXiv.org, Nov. 11, 2021. https://arxiv.org/abs/2111.06377v3 (accessed May 03, 2023).
+[10] E. J. Hu et al., “LoRA: Low-Rank Adaptation of Large Language Models.” arXiv, Oct. 16, 2021. doi: 10.48550/arXiv.2106.09685.
+[11] Z. Peng et al., “Conformer: Local Features Coupling Global Representations for Visual Recognition.” arXiv, May 09, 2021. doi: 10.48550/arXiv.2105.03889.
+[12] M. Tsimpoukelli, J. Menick, S. Cabi, S. M. A. Eslami, O. Vinyals, and F. Hill, “Multimodal Few-Shot Learning with Frozen Language Models.” arXiv, Jul. 03, 2021. doi: 10.48550/arXiv.2106.13884.
+[13] M. Artetxe et al., “Efficient Large Scale Language Modeling with Mixtures of Experts.” arXiv, Oct. 26, 2022. doi: 10.48550/arXiv.2112.10684.
+[14] H. Bao et al., “VLMo: Unified Vision-Language Pre-Training with Mixture-of-Modality-Experts.” arXiv, May 27, 2022. doi: 10.48550/arXiv.2111.02358.
+[15] S. Borgeaud et al., “Improving language models by retrieving from trillions of tokens.” Feb. 07, 2022. doi: 10.48550/arXiv.2112.04426.
+[16] M. Cherti et al., “Reproducible scaling laws for contrastive language-image learning.” arXiv, Dec. 14, 2022. doi: 10.48550/arXiv.2212.07143.
+[17] A. Chowdhery et al., “PaLM: Scaling Language Modeling with Pathways.” arXiv, Oct. 05, 2022. doi: 10.48550/arXiv.2204.02311.
+[18] H. W. Chung et al., “Scaling Instruction-Finetuned Language Models.” arXiv, Dec. 06, 2022. Accessed: May 02, 2023. [Online]. Available: http://arxiv.org/abs/2210.11416
+[19] W. Dai, L. Hou, L. Shang, X. Jiang, Q. Liu, and P. Fung, “Enabling Multimodal Generation on CLIP via Vision-Language Knowledge Distillation.” arXiv, Mar. 30, 2022. doi: 10.48550/arXiv.2203.06386.
+[20] W. Fedus, B. Zoph, and N. Shazeer, “Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity.” arXiv, Jun. 16, 2022. doi: 10.48550/arXiv.2101.03961.
+[21] J. Geiping and T. Goldstein, “Cramming: Training a Language Model on a Single GPU in One Day.” arXiv, Dec. 28, 2022. Accessed: Mar. 23, 2023. [Online]. Available: http://arxiv.org/abs/2212.14034
+[22] Y. Hao et al., “Language Models are General-Purpose Interfaces.” Jun. 13, 2022. doi: 10.48550/arXiv.2206.06336.
+[23] S. Khan, M. Naseer, M. Hayat, S. W. Zamir, F. S. Khan, and M. Shah, “Transformers in Vision: A Survey,” ACM Comput. Surv., vol. 54, no. 10s, pp. 1–41, Jan. 2022, doi: 10.1145/3505244.
+[24] S. Ma et al., “TorchScale: Transformers at Scale.” Nov. 23, 2022. doi: 10.48550/arXiv.2211.13184.
+[25] L. Ouyang et al., “Training language models to follow instructions with human feedback,” arXiv.org, Mar. 04, 2022. https://arxiv.org/abs/2203.02155v1 (accessed May 03, 2023).
+[26] S. Smith et al., “Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, A Large-Scale Generative Language Model.” Feb. 04, 2022. doi: 10.48550/arXiv.2201.11990.
+[27] A. Srivastava et al., “Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models.” arXiv, Jun. 10, 2022. doi: 10.48550/arXiv.2206.04615.
+[28] H. Wang et al., “Foundation Transformers.” arXiv, Oct. 19, 2022. doi: 10.48550/arXiv.2210.06423.
+[29] M. Wortsman et al., “Robust fine-tuning of zero-shot models.” arXiv, Jun. 21, 2022. doi: 10.48550/arXiv.2109.01903.
+[30] J. Yu, Z. Wang, V. Vasudevan, L. Yeung, M. Seyedhosseini, and Y. Wu, “CoCa: Contrastive Captioners are Image-Text Foundation Models.” arXiv, Jun. 13, 2022. doi: 10.48550/arXiv.2205.01917.
+[31] J.-B. Alayrac et al., “🦩 Flamingo: a Visual Language Model for Few-Shot Learning,” 2023.
+[32] S. Bubeck et al., “Sparks of Artiﬁcial General Intelligence: Early experiments with GPT-4,” 2023.
+[33] S. Huang et al., “Language Is Not All You Need: Aligning Perception with Language Models.” arXiv, Mar. 01, 2023. doi: 10.48550/arXiv.2302.14045.
+[34] A. Kirillov et al., “Segment Anything,” arXiv.org, Apr. 05, 2023. https://arxiv.org/abs/2304.02643v1 (accessed May 02, 2023).
+[35] S. Liu et al., “Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection.” arXiv, Mar. 20, 2023. doi: 10.48550/arXiv.2303.05499.
+[36] K. Meng, D. Bau, A. Andonian, and Y. Belinkov, “Locating and Editing Factual Associations in GPT.” arXiv, Jan. 13, 2023. doi: 10.48550/arXiv.2202.05262.
+[37] OpenAI, “GPT-4 Technical Report.” arXiv, Mar. 27, 2023. doi: 10.48550/arXiv.2303.08774.
+[38] J. W. Rae, A. Potapenko, S. M. Jayakumar, C. Hillier, and T. P. Lillicrap, “Compressive Transformers for Long-Range Sequence Modelling,” presented at the International Conference on Learning Representations, Apr. 2023. Accessed: May 01, 2023. [Online]. Available: https://openreview.net/forum?id=SylKikSYDH
+[39] J. Yang et al., “Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond.” Apr. 27, 2023. doi: 10.48550/arXiv.2304.13712.
+[40] W. X. Zhao et al., “A Survey of Large Language Models.” arXiv, Apr. 27, 2023. doi: 10.48550/arXiv.2303.18223.
