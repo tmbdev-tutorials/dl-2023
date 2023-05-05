@@ -1,0 +1,11 @@
+**/venv
+venv
+data
+*.pyc
+*.tiff
+old
+pdfs
+.ipynb_checkpoints
+.nvim*
+lightning_logs
+.DS_Store
